@@ -9,7 +9,7 @@ import '../stylesheets/projectSection.css';
 
 export default function ProjectSection(){
     return(
-        <div id="project-section">
+        <div id="project-section" class="intersect">
             <div id="project-section-heading" class="intersect">
                 <div id="heading-wrapper"></div>
                 <h1>Projects : </h1>
@@ -22,7 +22,7 @@ export default function ProjectSection(){
 }
 
 function ProjectList(){
-    var projectNames = ["Joker.","Biker Gang.","Speeve.","Anime Hub.","Employee Management"];
+    var projectNames = ["Joker.","Biker Gang.","Speeve.","Anime Hub.","Employee Management."];
     var images = [joker,bikerGang,speeve,animehub,ems];
 
     return(
@@ -32,7 +32,7 @@ function ProjectList(){
                     <div id="project-image-wrapper">
                         <img src={images[key]} />
                     </div>
-                    <h2 id="project-heading" onMouseEnter = {showImage} onMouseLeave = {hideImage}><span style={{
+                    <h2 id="project-heading" class="intersect" onMouseEnter = {showImage} onMouseLeave = {hideImage}><span style={{
                         opacity: '0.5',
                         marginRight: '40px',
                         fontSize: '60px'

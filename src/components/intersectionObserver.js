@@ -6,7 +6,6 @@ export default function checkIntersection(){
     targets = [...targets];
 
     let options = {
-        threshold: 0.5
     }
     
     let observer = new IntersectionObserver(handleIntersect,options);
