@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><div id="twoseven-scripts" data-info="Scripts added by TwoSeven extension" style="display: none !important; position: static !important; top: 0px !important; left: 0px !important; width: 0px !important; height: 0px !important;"><script type="text/javascript" id="__tmpScript-202564709" data-added-by-two-seven="1">(function() {
+      window.twoseven = {};
+    })();</script><script type="text/javascript" id="__tmpScript-450863998" data-added-by-two-seven="1">(function() {
+      window.twoseven.waitForDOMNode = async function waitForDOMNode(e,t=document){e=e||{};const{type:n,value:o}=e;if(!n||!o)throw new Error("Must specify identifier");let s=o;switch(n){case"tag":s=o.toUpperCase()}if("check"!==n){const e=await i({type:"selector",value:s},[],t);if(e)return new Promise(t=>t(e))}async function i({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t);break;case"check":for(const e of n){if(await t(e))return e}}return s}return new Promise((e,o)=>{const r=new MutationObserver(async o=>{for(const a of o)if("childList"===a.type){const o=Array.from(a.addedNodes),c=await i({type:n,value:s},o,t);if(c)return r.disconnect(),e(c)}});r.observe(t,{childList:!0,subtree:!0})})};
+    })();</script><script type="text/javascript" id="__tmpScript-149154234" data-added-by-two-seven="1">(function() {
+      
+  window.twoseven.reportError = function reportError(e,t,n){"string"==typeof(n=n||{})&&(n={message:n});const{message:o,stack:s}=t;Object.assign(n,{tag:e,error:{message:o,stack:s}}),window.tsExtGetPostToParent()({name:name,tag:e,action:"report-error",json:n}),console.error(JSON.stringify(n.error))}
+;
+    })();</script><script type="text/javascript" id="__tmpScript-545430883" data-added-by-two-seven="1">(function() {
+      
+  window.twosevenHmsToSecondsOnly = function(str) {
+      var p = str.split(':'),
+          s = 0, m = 1;
+
+      while (p.length > 0) {
+          s += m * parseInt(p.pop(), 10);
+          m *= 60;
+      }
+
+      return s;
+  }
+;
+    })();</script><script type="text/javascript" id="__tmpScript-222220251" data-added-by-two-seven="1">(function() {
+      window.twosevenExtLog = function twosevenExtLog(e,o,c){o||(o=e,e=void 0);let n=c||"black";if(c)switch(c){case"success":n="Green";break;case"info":n="DodgerBlue";break;case"error":n="Red";break;case"warning":n="Orange";break;default:n=c}e?console.log("%c"+e+": "+o,`color:${n}`):console.log("%c"+o,`color:${n}`)};
+    })();</script><script type="text/javascript" id="__tmpScript-106152493" data-added-by-two-seven="1">(function() {
+      
+  document.twosevenGET = function(url, callback) {
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+        if (xmlhttp.status == 200) {
+          callback(null, xmlhttp.responseText);
+        } else {
+          callback('something else other than 200 was returned', '');
+        }
+      }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  };
+;
+    })();</script><script type="text/javascript" id="__tmpScript-71883463" data-added-by-two-seven="1">(function() {
+      
+  window.triggerEvent = function(e,t,n,o=!1){let s;o?(n&&"string"!=typeof n&&(n=JSON.stringify(n)),s=n):s={data:n},window.twosevenScriptsDiv&&n&&"object"==typeof n&&(console.warn(`WARNING: Attempting to send an object via event.detail from CS->Page does not work on Firefox: ${JSON.stringify(n)}`),console.error((new Error).stack));var i=new CustomEvent(t,{bubbles:!0,composed:!0,detail:s});e.dispatchEvent(i)}
+;
+    })();</script><script type="text/javascript" id="__tmpScript-58828476" data-added-by-two-seven="1">(function() {
+      window.twoseven.postTo = async function postTo(e,t,n=!1){let o;return t.name=t.name||name,o=n?new Promise(e=>{const n=`ack-${t.action}-${1e9*Math.random()|0}`;t.ack={event:n};window.debug&&["play","pause","currentTime"].some(e=>t.action.includes(e)),window.addEventListener("message",function t({data:o={}}){o.action===n&&(window.removeEventListener("message",t),e(o.json))})}):new Promise(e=>e()),e.postMessage(t,"*"),o};
+    })();</script><script type="text/javascript" id="__tmpScript-470113324" data-added-by-two-seven="1">(function() {
+      window.tsExtGetPostTo = function tsExtGetPostTo(){return window.twoseven&&window.twoseven.postTo||window.postTo};
+    })();</script><script type="text/javascript" id="__tmpScript-983137792" data-added-by-two-seven="1">(function() {
+      window.tsExtGetPostToParent = function tsExtGetPostToParent(){return window.twoseven&&window.twoseven.postToParent||window.postToParent};
+    })();</script><script type="text/javascript" id="__tmpScript-832641642" data-added-by-two-seven="1">(function() {
+      window.twoseven.postResponse = async function postResponse(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+    })();</script><script type="text/javascript" id="__tmpScript-385537421" data-added-by-two-seven="1">(function() {
+      window.twoseven.postToParent = async function postToParent(e,t=!1){return window.tsExtGetPostTo()(window.parent,e,t)};
+    })();</script><script type="text/javascript" id="__tmpScript-488429998" data-added-by-two-seven="1">(function() {
+      window.twoseven.postToTop = async function postToTop(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+    })();</script><script type="text/javascript" id="__tmpScript-396323738" data-added-by-two-seven="1">(function() {
+      
+  window.twoseven.getFromStorage = e=>new Promise((t,n)=>{const o="get-from-storage-"+(1e9*Math.random()|0);window.addEventListener(o,e=>{window.removeEventListener(o,this);const{detail:{data:{value:n}}}=e;t(n)}),triggerEvent(window,"get-from-storage",{key:e,evt:o})})
+  window.twoseven.saveToStorage = e=>{triggerEvent(window,"save-to-storage",e)}
+;
+    })();</script><script type="text/javascript" id="__tmpScript-887403128" data-added-by-two-seven="1">(function() {
+      
+  function attachHistoryListeners(){var e=history.pushState;history.pushState=function(t,n,o){return"function"==typeof history.onpushstate&&history.onpushstate({state:t}),triggerEvent(window,"pushstate",{uri:o}),e.apply(history,arguments)};var t=history.replaceState;history.replaceState=function(e){return"function"==typeof history.onreplacestate&&history.onreplacestate({state:e}),t.apply(history,arguments)}}
+  attachHistoryListeners()
+;
+    })();</script><script type="text/javascript" id="__tmpScript-718577527" data-added-by-two-seven="1">(function() {
+      window.twoseven.once = function once(e,t,n){e.addEventListener(t,function o(s){e.removeEventListener(t,o),n(s)})};
+    })();</script><script type="text/javascript" id="__tmpScript-494771977" data-added-by-two-seven="1">(function() {
+      
+  window.twoseven.isOnTwoSevenTab = async () => {
+    const result = await window.twoseven.postTo(window, { action: 'is-on-twoseven-tab' }, true)
+    return result
+  }
+;
+    })();</script><script type="text/javascript" id="__tmpScript-671948122" data-added-by-two-seven="1">(function() {
+      
+  window.twoseven.isPaused = async () => {
+    const result = await window.twoseven.postTo(window, { action: 'twoseven:pause-state' }, true)
+    return result
+  }
+;
+    })();</script><script type="text/javascript" id="__tmpScript-366559497" data-added-by-two-seven="1">(function() {
+      
+      const modal = document.querySelector('.twoseven-ext-tab-media-modal')
+      const modalCloseBtn = modal.querySelector('.close')
+      function closeModal () {
+        modal.style.display = 'none'
+        const frame = document.querySelector('#twoseven-ext-tab-media-iframe').contentWindow
+        frame.postMessage({
+          __evt_name: 'modal-hide'
+        }, '*')
+      }
+      modalCloseBtn.onclick = closeModal
+
+      window.onmessage = function (e) {
+        if (e.data.__evt_name === 'modal-hide') {
+          closeModal()
+        }
+      }
+
+      window.twoseven.closeTabMediaModal = closeModal
+
+      window.onclick = function (e) {
+        if (e.target.id === 'twoseven-ext-tab-media-modal' && modal.style.display === 'block') {
+            closeModal()
+        }
+      }
+    ;
+    })();</script></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style>body{
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc3R5bGVzaGVldHMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFNBQVM7SUFDVCxVQUFVO0lBQ1YsYUFBYTtBQUNqQiIsInNvdXJjZXNDb250ZW50IjpbImJvZHl7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgaGVpZ2h0OiAyMDB2aDtcclxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>@import url(https://fonts.googleapis.com/css2?family=Oxygen&display=swap);</style><style>
+#Navbar{
+    z-index: 1;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    border-radius: 50px;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(-50%,0%);
+    color: black;
+    font-family: 'Oxygen';
+    padding: 0px 30px 0px 30px;
+    background-color: white;
+    margin: 0;
+    box-shadow: 0px 20px 15px -10px #00000052;
+    animation: nav-bar-drop 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#Navbar h1{
+    padding: 10px 20px 10px 10px;
+    font-size: 20px;
+    border-right: 2px solid black;
+}
+
+#sub-navbar #links{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 20px 0px 20px;
+}
+
+#sub-navbar h1{
+    font-size: 17px;
+    padding: 12px;
+    border: none;
+}
+
+@keyframes nav-bar-drop{
+    from{
+        transform: translate(-50%,-80%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-50%,0%);
+        opacity: 1;
+    }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc3R5bGVzaGVldHMvTmF2YmFyLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBSUE7SUFDSSxVQUFVO0lBQ1YsZUFBZTtJQUNmLFNBQVM7SUFDVCxTQUFTO0lBQ1QsbUJBQW1CO0lBQ25CLGFBQWE7SUFDYixVQUFVO0lBQ1YsOEJBQThCO0lBQzlCLG1CQUFtQjtJQUNuQiw2QkFBNkI7SUFDN0IsWUFBWTtJQUNaLHFCQUFxQjtJQUNyQiwwQkFBMEI7SUFDMUIsdUJBQXVCO0lBQ3ZCLFNBQVM7SUFDVCx5Q0FBeUM7SUFDekMsZ0VBQWdFO0FBQ3BFOztBQUVBO0lBQ0ksNEJBQTRCO0lBQzVCLGVBQWU7SUFDZiw2QkFBNkI7QUFDakM7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLDBCQUEwQjtBQUM5Qjs7QUFFQTtJQUNJLGVBQWU7SUFDZixhQUFhO0lBQ2IsWUFBWTtBQUNoQjs7QUFFQTtJQUNJO1FBQ0ksK0JBQStCO1FBQy9CLFVBQVU7SUFDZDtJQUNBO1FBQ0ksNkJBQTZCO1FBQzdCLFVBQVU7SUFDZDtBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PU94eWdlbiZkaXNwbGF5PXN3YXAnKTtcclxuXHJcblxyXG4jTmF2YmFye1xyXG4gICAgei1pbmRleDogMTtcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIHRvcDogMjBweDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgd2lkdGg6IDQwJTtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLDAlKTtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIGZvbnQtZmFtaWx5OiAnT3h5Z2VuJztcclxuICAgIHBhZGRpbmc6IDBweCAzMHB4IDBweCAzMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMjBweCAxNXB4IC0xMHB4ICMwMDAwMDA1MjtcclxuICAgIGFuaW1hdGlvbjogbmF2LWJhci1kcm9wIDAuNHMgY3ViaWMtYmV6aWVyKDAuMDc1LCAwLjgyLCAwLjE2NSwgMSk7XHJcbn1cclxuXHJcbiNOYXZiYXIgaDF7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDIwcHggMTBweCAxMHB4O1xyXG4gICAgZm9udC1zaXplOiAyMHB4O1xyXG4gICAgYm9yZGVyLXJpZ2h0OiAycHggc29saWQgYmxhY2s7XHJcbn1cclxuXHJcbiNzdWItbmF2YmFyICNsaW5rc3tcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAgcGFkZGluZzogMHB4IDIwcHggMHB4IDIwcHg7XHJcbn1cclxuXHJcbiNzdWItbmF2YmFyIGgxe1xyXG4gICAgZm9udC1zaXplOiAxN3B4O1xyXG4gICAgcGFkZGluZzogMTJweDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxufVxyXG5cclxuQGtleWZyYW1lcyBuYXYtYmFyLWRyb3B7XHJcbiAgICBmcm9te1xyXG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsLTgwJSk7XHJcbiAgICAgICAgb3BhY2l0eTogMDtcclxuICAgIH1cclxuICAgIHRve1xyXG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsMCUpO1xyXG4gICAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICB9XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style><link href="chrome-extension://ijmgabkialjfgihheolilfhcefheabok/web_resources/modal/modal.css" rel="stylesheet" id="__tmpStyle"></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><div id="main-page"><div id="Navbar"><h1>AK</h1><div id="sub-navbar"><div id="links"><h1>Home</h1><h1>About Me</h1><h1>Projects</h1><h1>Skills</h1><h1>Contact</h1></div></div></div><div class="wrapper"><div class="container" style="transform: scale(0.2) translateZ(0px);"><div class="item" style="transform: scaleY(0) translateZ(0px);"></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js.download"></script><script src="./React App_files/vendors_main.chunk.js.download"></script><script src="./React App_files/main.chunk.js.download"></script>
+
+<div>
+    <div id="twoseven-ext-tab-media-modal" class="twoseven-ext-tab-media-modal" style="display: none;">
+      <!-- Modal content -->
+      <div class="twoseven-ext-tab-media-modal-content">
+        <div class="iframe-container" style="height: 100%; width: 100%;">
+          <span class="close">×</span>
+        </div>
+      </div>
+    </div></div></body></html>

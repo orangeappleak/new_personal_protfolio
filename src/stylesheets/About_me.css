@@ -1,0 +1,85 @@
+#about-me{
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10em;
+    margin-top: 10em;
+}
+
+#about-me-heading{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 10em;
+}
+
+#about-me #about-me-heading h1.intersect{
+    width: 70%;
+    font-size: 60px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    color: white;
+    opacity: 0;
+    transition-delay: 1000ms;
+    transform: translate(-30%,0%);
+    transition: opacity 0.5s ease-in-out,transform 1.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#about-me #about-me-heading h1.intersecting{
+    transform: translate(0%,0%);
+    opacity: 1;
+}
+
+#about-me-heading-wrapper{
+    position: relative;
+    width: 12%;
+    padding: 0;
+    overflow: hidden;
+}
+
+#about-me-curtain{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    transform: translate(100%,0%);
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#about-me-heading-wrapper.intersecting #about-me-curtain{
+    transform: translate(0%,0%);
+}
+
+#about-me-heading h2{
+    position: relative;
+    flex: 1;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: black;
+    padding: 10px;
+    margin: 0;
+}
+
+
+#about-img{
+    position: absolute;
+    z-index: -1;
+    left: 60%;
+    filter: contrast(1.1) brightness(0.8);
+    overflow: hidden;
+}
+
+#about-img.intersect img{
+    opacity: 0;
+    transform: translate(100%,0%);
+    transition-delay: 700ms;
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1),opacity 0.4s ease-in-out;
+}
+
+#about-img.intersecting img{
+    opacity: 1;
+    transform: translate(0%,0%);
+}
