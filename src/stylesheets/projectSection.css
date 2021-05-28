@@ -4,16 +4,13 @@
     position: relative;
     height: auto;
     overflow: hidden;
-    transition: background-color 0.7s ease-in-out;
-}
+    background: linear-gradient(to bottom, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-#project-section.intersecting{
-    background-color: white;
 }
 
 #project-section-heading{
     position: relative;
-    width: 10%;
+    width: 15%;
     margin: 0 0 0 10em;
     display: flex;
     overflow: hidden;
@@ -49,18 +46,18 @@
 }
 
 #project-list{
-    font-size: 250px;
+    font-size: 150px;
+    right: 20%;
     color: white;
     font-family: Ostrich;
     width: 100%;
-    overflow: hidden;
 }
 
 #project{
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin: 40px;
+    margin-bottom: 0.6em;
 }
 
 #project-image-wrapper{
@@ -90,12 +87,15 @@
     text-align: right;
     margin: 0;
     transform: translate(20%,0%);
-    opacity: 0.6;
+    opacity: 0.8;
     color: black;
     cursor: pointer;
     opacity: 0;
-    filter: invert(1) contrast(1.2) brightness(0.2);
     transition:opacity 0.6s ease-in-out, transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#project-heading span{
+    pointer-events: none;
 }
 
 #project-list #project-heading.intersecting{

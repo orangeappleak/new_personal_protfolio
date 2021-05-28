@@ -1,11 +1,11 @@
 #about-me{
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start;
+    width: 99vw;
     height: 100vh;
     display: flex;
     align-items: center;
     margin-bottom: 10em;
     margin-top: 10em;
+    overflow: hidden;
 }
 
 #about-me-heading{
@@ -16,7 +16,7 @@
 
 #about-me #about-me-heading h1.intersect{
     width: 70%;
-    font-size: 60px;
+    font-size: 40px;
     text-align: justify;
     font-weight: 400;
     font-family: 'Montserrat';
@@ -34,7 +34,7 @@
 
 #about-me-heading-wrapper{
     position: relative;
-    width: 12%;
+    width: 18%;
     padding: 0;
     overflow: hidden;
 }
@@ -70,10 +70,13 @@
     left: 60%;
     filter: contrast(1.1) brightness(0.8);
     overflow: hidden;
+    margin: 0;
 }
 
 #about-img.intersect img{
     opacity: 0;
+    width: 100%;
+    height: 100%;
     transform: translate(100%,0%);
     transition-delay: 700ms;
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1),opacity 0.4s ease-in-out;

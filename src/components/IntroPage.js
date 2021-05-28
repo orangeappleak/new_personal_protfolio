@@ -7,7 +7,7 @@ export default function IntroPage(){
   return(
       <Parallax pages={1.4} id="parallax-intro" style={{position: 'relative',height: '100vh'}}>
         <ParallaxLayer id="background-image" offset={0} speed={2}>
-          <img alt="cannot be displayed" src="https://images.unsplash.com/photo-1616244013240-227ec9abfefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80"/>
+          <img alt="cannot be displayed" src="https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/17.jpg"/>
         </ParallaxLayer>
         <ParallaxLayer id="intro-heading" offset={0} speed={3.5}>
             <h1>Bringing <span id="strip"> Designs to Life</span> since 2019.</h1>

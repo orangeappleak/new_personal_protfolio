@@ -95,11 +95,9 @@
 }
 
 
-
-
 #intro-about-headings #skill-set h1:nth-child(1){
     font-family: 'Montserrat';
-    font-size: 90px;
+    font-size: 70px;
     font-weight: 700;
     color: white;
     margin-bottom: 50px;
