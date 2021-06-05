@@ -2,7 +2,7 @@ import {useEffect} from 'react';
 import {Parallax,ParallaxLayer} from '@react-spring/parallax';
 import '../stylesheets/App.css';
 
-import IntroPage from '../components/introPage.js';
+import IntroPage from '../components/IntroPage.js';
 import Navbar from '../components/Navbar.js';
 
 function App() {
