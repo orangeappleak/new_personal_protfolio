@@ -1,26 +1,40 @@
 import {useEffect} from 'react';
+import {Parallax,ParallaxLayer} from '@react-spring/parallax';
 import '../stylesheets/App.css';
-import './fonts/ostrich-sans.sans-black.ttf';
-import Navbar from '../components/Navbar';
-import IntroPage from '../components/IntroPage';
-import AboutPage from '../components/About_me';
-import ProjectSection from '../components/project';
-import checkIntersection from '../components/intersectionObserver';
+
+import IntroPage from '../components/introPage.js';
+import Navbar from '../components/Navbar.js';
 
 function App() {
 
   useEffect(() => {
-    checkIntersection()
-  });
+    load_end();
+  }, []);
 
   return (
     <div id="main-page">
+      <div id="load">
+        <h1 id="A">A</h1>
+        <div id="seperation"></div>
+        <h1 id="K">K</h1>
+      </div>
       <Navbar />
-      <IntroPage />
-      <AboutPage />
-      <ProjectSection />
+      <Parallax style={{position: 'relative',marginTop: '5em'}} id="parallax-pages" pages={1}>
+        <IntroPage />
+      </Parallax>
     </div>
   );
+}
+
+function load_end(){
+  document.querySelector("#A").addEventListener('animationend',() => {
+    setTimeout(() => {
+      document.querySelector("#load").classList.add("remove_load");
+    }, 800);
+    setTimeout(() => {
+      document.querySelector("#main-page").removeChild(document.querySelector("#load"));
+    }, 3000);
+  });
 }
 
 export default App;

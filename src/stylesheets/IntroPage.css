@@ -1,127 +1,51 @@
-
-
-#parallax-intro{
-    display: flex;
-    flex-direction: column;
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start;
-}
-
-#parallax-intro::-webkit-scrollbar{
-    display: none;
-}
-
-#parallax-intro div{
-    height: 100vh;
-    flex: 1;
-}
-
-#background-image{
-    width: 100%;
-    height: 100vh;
-}
-
-#background-image img{
-    width: 100%;
-    filter: contrast(1.2) brightness(1);
-}
-
-#intro-heading{
-    color: white;
-    font-size: 70px;
-    letter-spacing: 2px;
-    font-family: 'Montserrat';
-    display: flex;
-    align-items: center;
-    font-weight: 900;
-}
-
-#intro-heading h1{
-    width: 100%;
-    margin-left: 8rem;
-}
-
-#intro-heading #strip{
-    color: black;
-    background-color: white;
-}
-
-
-#intro-about{
-    height: 100vh;
-    background-image: url('https://images.wallpapersden.com/image/download/cool-4k-pattern_bGduZWyUmZqaraWkpJRobWllrWdma2U.jpg');
-}
-
-#intro-about-headings{
+#intro-page{
     position: relative;
-    top: 10%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 100vh;
 }
 
-#intro-about-headings #skill-set{
+#intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#intro #intro-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+
+#intro h1{
+    color: white;
+    font-size: 80px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+#intro h2{
+    margin-top: 50px;
+    font-size: 22px;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    word-spacing: 2px;
+}
+
+#social h2{
+    color: white;
+    font-weight: 700;
+}
+
+#social-icons{
     display: flex;
     flex-direction: row;
 }
 
-#skill-set.intersect{
-    color: black;
-    opacity: 0;
-    transition-delay: 2000ms;
-    transition:color 1s ease-in-out,opacity 1s ease-in-out;
-}
-
-#skill-set.intersecting{
-    color: white;
-    opacity: 1;
-}
-
-#skill-set-image{
-    flex: 1.5;
-    width: 100%;
-    padding: 0 0 0 0;
-}
-
-#skill-set-image svg{
-    width: 150%;
-}
-
-#skill-set #skills{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex: 0.7;
-    padding: 0 0 0 10em;
-}
-
-
-#intro-about-headings #skill-set h1:nth-child(1){
-    font-family: 'Montserrat';
-    font-size: 70px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 50px;
-}
-
-
-#intro-about-headings #skill-set h1{
-    margin: 0 0 15px 0;
-    color: white;
-    font-family: 'Montserrat';
-    font-size: 60px;
-    text-align: left;
-    font-weight: 400;
-}
-
-#parallax-bubbles{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.6;
-}
-
-#parallax-bubbles svg{
-    width: 70%;
+#social-icons img{
+    margin-top: 2em;
+    margin-right: 2em;
+    width: 3em;
 }

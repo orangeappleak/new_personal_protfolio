@@ -1,22 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
 
-body{
+*{
     margin: 0;
     padding: 0;
-    height: 200vh;
+}
+
+body{
     background-color: black;
+    overflow: hidden;
+}
+
+#main-page{
+    border: 20px solid white;
+    height: 100vh;
+    width: auto;
+    padding: 5em;
+}
+
+#load{
+    background-color: white;
+    height: 100vh;
+    width: 100% ;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    font-size: 100px;
+    display: flex;
+    font-family: 'Open Sans'; 
+    transform: translate(0%,0%);
+    transition-delay: 1500ms;
+    transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+#load.remove_load{
+    transform: translate(0%,-100%);
+}
+
+#A{
+    animation: A 1.5s cubic-bezier(1, 0, 0, 1);
+    overflow: hidden;
+}
+
+#K{
+    animation: K 1.5s cubic-bezier(1, 0, 0, 1);
+    overflow: hidden;
+}
+
+#load h1{
+    position: relative;
+}
+
+#seperation{
+    position: relative;
+    height: 30%;
+    border: 2px solid black;
+    margin: 0 0.5em;
+    animation: load 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 ::-webkit-scrollbar{
-    width: 4px;
-}
-
-::-webkit-scrollbar-track{
+    width: 3px;
     background-color: black;
 }
 
 ::-webkit-scrollbar-thumb{
     background-color: white;
-    opacity: 0.5;
+}
+
+@keyframes load {
+    from{
+        height: 0%;
+        top: 20%;
+        opacity: 0;
+    }
+    to{
+        height: 30%;
+        opacity: 1;
+        top: 0%;
+    }
+}
+
+@keyframes A {
+    from{
+        left: 2%;
+        opacity: 0;
+    }
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes K {
+    from{
+        right: 2%;
+        opacity: 0;
+    }
+    to{
+        right: 0;
+        opacity: 1;
+    }
 }
