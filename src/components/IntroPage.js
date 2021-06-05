@@ -2,7 +2,7 @@ import React from 'react';
 import {Parallax,ParallaxLayer} from '@react-spring/parallax';
 import svg from './intro-svg.svg';
 
-import '../stylesheets/introPage.css';
+import '../stylesheets/IntroPage.css';
 
 var IntroPage = () => (
         <div id="intro-page">
