@@ -35,11 +35,14 @@ function load_end(){
   document.querySelector("#A").addEventListener('animationend',() => {
     setTimeout(() => {
       document.querySelector("#load").classList.add("remove_load");
+    }, 800);
+    setTimeout(() => {
       var animate = document.getElementsByClassName('animate');
       [...animate].forEach(ele => {
-        ele.classList.add("now");
-      });
-    }, 800);
+      ele.classList.add("now");
+    });
+    }, 1000);
+    
     setTimeout(() => {
       document.querySelector("#main-page").removeChild(document.querySelector("#load"));
     }, 3000);

@@ -16,14 +16,30 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    opacity: 0;
-    transition-delay: 1000ms;
-    transition:opacity 1s ease-in-out;
 }
 
-#intro #intro-heading.animate.now{
-    opacity: 1;
+
+#intro-heading h1{
+    transform: translate(-40%,0%);
+    opacity: 0;
+    transition: transform 0.7s ease-in-out,opacity 0.4s ease-in-out;
 }
+
+#intro-heading h2{
+    transform: translate(-50%,0%);
+    opacity: 0;
+    transition: transform 1s ease-in-out,opacity 0.3s ease-in-out;
+}
+
+#intro-heading.animate.now h1{
+    opacity: 1;
+    transform: translate(0%,0%);
+}
+#intro-heading.animate.now h2{
+    opacity: 1;
+    transform: translate(0%,0%);
+}
+
 
 
 #intro h1{
