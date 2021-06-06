@@ -17,6 +17,7 @@
     }
 
     #intro-heading{
+        height: 100%;
         padding: 1em;
         backdrop-filter: contrast(1.2) brightness(0.2);
     }

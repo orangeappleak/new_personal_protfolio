@@ -29,7 +29,7 @@ var IntroPage = () => (
                                         position: 'relative',margin: '20px',height: 'auto',width: '100%',overflow: 'hidden'
                                         
                                         }} offset={0} speed={2} id="intro-img" className="intro-img">
-                                        <img className="animate" width="100%" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
+                                        <img className="animate" height="100%" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
                                 </ParallaxLayer>
                         </div>
                 </ParallaxLayer>
