@@ -4,14 +4,13 @@ import {ParallaxLayer} from '@react-spring/parallax';
 import '../stylesheets/About.css';
 
 var About = () => (
-    <ParallaxLayer offset={0.99} speed={1.2} id="about-section">
+    <ParallaxLayer style={{position: 'relative' ,height: '50vh',margin: '5em 0'}} offset={0} speed={1.2} id="about-section">
         <div id="back-strip">
             <h1 style={{fontWeight: '700'}}>About Me</h1>
             <ParallaxLayer style={{
-                left: '40%',
-                width: '50%',
-                height: 'auto'
-            }} speed={0.5} offset={0} id="skills">
+                position: 'relative',
+                height: '50vh',
+            }} speed={0.4} offset={0} id="skills">
                 <h1>Web Developer</h1>
                 <h1>UI/UX Designer</h1>
                 <h1>FullStack Developer</h1>

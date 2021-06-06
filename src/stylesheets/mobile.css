@@ -1,0 +1,71 @@
+@media screen and (max-width: 600px){
+    #main-page{
+        padding: 0;
+    }
+
+    #main-page #Navbar{
+        display: none;
+    }
+
+    #intro-page{
+        height: 100vh;
+    }
+
+    #intro-page #intro{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #intro-heading{
+        padding: 1em;
+        backdrop-filter: contrast(1.2) brightness(0.2);
+    }
+
+    #intro #intro-heading h1{
+        font-size: 70px;
+    }
+
+    #intro #intro-img{
+        position: absolute !important;
+        margin: 0 !important;
+        top: 50;
+        transform: translate(0%,0%);
+        width: 100%;
+        z-index: -1
+    }
+
+    #main-page #about-section{
+        margin: 0 !important;
+        height: 100vh !important;
+    }
+
+    #about-section #back-strip{
+        flex-direction: column;
+        height: 100%;
+        width: auto;
+    }
+
+    #back-strip h1{
+        font-size: 70px;
+    }
+
+    #back-strip #skills{
+        top: 15%;
+        background-color: black;
+        color: white;
+        width: 85% !important;
+    }
+    
+    #skills h1{
+        font-size: 34px !important;
+    }
+
+    #skills p{
+        font-size: 22px !important;
+    }
+
+    #project-section{
+        display: none;
+    }
+    
+}

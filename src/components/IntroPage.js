@@ -6,7 +6,11 @@ import '../stylesheets/IntroPage.css';
 
 var IntroPage = () => (
         <div id="intro-page">
-                <ParallaxLayer speed={1.2} offset={0}>
+                <ParallaxLayer style={{
+                        position: 'relative',
+                        height: '100vh',
+                        alignItems: 'center'
+                }} speed={1.2} offset={0}>
                         <div id="intro">
                                 <div className="animate" id="intro-heading">
                                         <h1>Bringing Designs to Life</h1>
@@ -21,8 +25,11 @@ var IntroPage = () => (
                                                 </div>
                                         </div>
                                 </div>
-                                <ParallaxLayer style={{position: 'relative',margin: '20px',height: '100%',overflow: 'hidden'}} offset={0} speed={2} id="intro-img">
-                                        <img className="animate" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
+                                <ParallaxLayer style={{
+                                        position: 'relative',margin: '20px',height: 'auto',width: '100%',overflow: 'hidden'
+                                        
+                                        }} offset={0} speed={2} id="intro-img" className="intro-img">
+                                        <img className="animate" width="100%" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
                                 </ParallaxLayer>
                         </div>
                 </ParallaxLayer>

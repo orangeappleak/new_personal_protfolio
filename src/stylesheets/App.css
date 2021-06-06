@@ -7,14 +7,15 @@
 
 body{
     background-color: black;
-    overflow: hidden;
+    border: 0px solid white;
+    border-radius: 10px;
+    height: 100%;
 }
 
 #main-page{
-    border: 20px solid white;
-    height: 100vh;
-    width: auto;
-    padding: 5em;
+    position: relative;
+    height: 90vh;
+    padding: 0 5em 0 5em;
 }
 
 #load{
@@ -39,7 +40,7 @@ body{
 }
 
 #load.remove_load{
-    transform: translate(0%,-100%);
+    transform: translate(0%,-120%);
 }
 
 #A{

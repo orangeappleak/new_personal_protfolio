@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 #Navbar{
-    top: 1px;
+    margin: 3em 0;
     position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Open Sans';
     font-weight: 300;
+    align-items: center;
     font-size: 8px;
     color: white;
-    background-color: transparent;
 }
 
 #logo h1{

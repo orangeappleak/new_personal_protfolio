@@ -1,6 +1,7 @@
 #intro-page{
     position: relative;
     width: 100%;
+    height: 100vh;
 }
 
 #intro{
@@ -65,11 +66,19 @@
     filter: grayscale(0);
 }
 
+#intro #intro-image{
+    position: relative !important;
+    margin: 20px !important;
+    height: auto !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+
 
 #intro-img img.animate{
     transform: translate(0%,50%);
     opacity: 0;
-    transition:opacity 0.5s ease-in-out, transform 1s cubic-bezier(.51,.92,.24,1.15);
+    transition:opacity 0.5s ease-in-out, transform 1s cubic-bezier(.75,0,.24,.99);
 }
 
 #intro-img img.animate.now{

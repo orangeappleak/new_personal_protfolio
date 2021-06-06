@@ -1,10 +1,12 @@
 import {useEffect} from 'react';
 import {Parallax,ParallaxLayer} from '@react-spring/parallax';
 import '../stylesheets/App.css';
+import '../stylesheets/mobile.css';
 
 import Navbar from '../components/Navbar.js';
 import IntroPage from '../components/IntroPage.js';
 import About from '../components/About';
+import Projects from '../components/Projects';
 
 function App() {
 
@@ -20,9 +22,10 @@ function App() {
         <h1 id="K">K</h1>
       </div>
       <Navbar />
-      <Parallax style={{position: 'relative',marginTop: '1em'}} id="parallax-pages" pages={1.3}>
+      <Parallax style={{position: 'relative'}} id="parallax-pages" pages={3}>
         <IntroPage />
         <About />
+        <Projects />
       </Parallax>
     </div>
   );
