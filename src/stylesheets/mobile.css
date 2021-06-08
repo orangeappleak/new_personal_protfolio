@@ -1,6 +1,7 @@
 @media screen and (max-width: 600px){
     #main-page{
         padding: 0;
+        height: 100vh;
     }
 
     #main-page #Navbar{
@@ -22,8 +23,20 @@
         backdrop-filter: contrast(1.2) brightness(0.2);
     }
 
+    #intro #read-more{
+        width: 40%;
+    }
+
+    #intro #read-more:hover{
+        width: 60%;
+    }
+
+    #intro #read-more h3{
+        font-size: 22px;
+    }
+
     #intro #intro-heading h1{
-        font-size: 70px;
+        font-size: 60px;
     }
 
     #intro #intro-img{
@@ -31,38 +44,103 @@
         margin: 0 !important;
         top: 50;
         transform: translate(0%,0%);
-        width: 100%;
+        height: 100vh !important;
         z-index: -1
     }
 
+    #intro-img img{
+        position: relative;
+        left: -50%;
+    }
+
     #main-page #about-section{
+        width: auto !important;
         margin: 0 !important;
-        height: 100vh !important;
+        height: 70vh !important;
+        margin: 16px 16px 5em 16px !important;
     }
 
     #about-section #back-strip{
         flex-direction: column;
-        height: 100%;
         width: auto;
+        padding: 16px;
     }
 
-    #back-strip h1{
-        font-size: 70px;
+    #about-section #back-strip h1{
+        font-size: 60px;
     }
 
     #back-strip #skills{
-        top: 15%;
+        margin-top: 5em;
+        padding: 1.5em !important;
         background-color: black;
         color: white;
         width: 85% !important;
     }
     
     #skills h1{
-        font-size: 34px !important;
+        font-size: 28px !important;
     }
 
     #skills p{
-        font-size: 22px !important;
+        font-size: 20px !important;
+        width: 100% !important;
+    }
+
+    #projects-heading{
+        border-radius: 20px !important;
+        font-size: 60px !important;
+        justify-content: center;
+    }
+
+    #project-section{
+        width: auto !important;
+        padding: 16px;
+    }
+
+    #project-section #back-svg{
+        top: 27%;
+        width: 100% !important;
+        height: auto !important;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        justify-content: center;
+    }
+
+    #back-svg svg{
+        display: flex;
+        width: 90%;
+    }
+
+    #project-section #project-list{
+        margin: 14em 0 0 0 !important;
+    }
+
+    #project-section #project-list #project{
+        margin-bottom: 20em !important;
+        margin-top: 2em !important;
+        padding: 0;
+    }
+
+    #project-list #project #project-img-wrapper{
+        height: 50% !important;
+        overflow: hidden;
+    }
+
+    #project-img-wrapper img{
+        height: 20%;
+
+    }
+
+    #project-list #project #project-heading-wrapper{
+        width: 80% !important;
+    }
+
+    #project #project-heading-wrapper h1{
+        text-align: center;
+        font-size: 28px;
     }
 
     
