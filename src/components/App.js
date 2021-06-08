@@ -22,7 +22,7 @@ function App() {
         <h1 id="K">K</h1>
       </div>
       <Navbar />
-      <Parallax style={{position: 'relative'}} id="parallax-pages" pages={3}>
+      <Parallax style={{position: 'relative'}} id="parallax-pages" pages={4}>
         <IntroPage />
         <About />
         <Projects />

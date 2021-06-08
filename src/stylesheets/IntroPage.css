@@ -58,6 +58,35 @@
     word-spacing: 2px;
 }
 
+#read-more{
+    width: 25%;
+    margin: 3em 0 0 0;
+    padding: 1em;
+    background-color: #21094e;
+    transition: width 0.2s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#read-more h3{
+    pointer-events: none;
+    margin: 0;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    transform: translate(0%,0%);
+    transition: transform 0.3s cubic-bezier(.75,0,.24,.99),color 0.7s ease-in-out;
+}
+
+#read-more:hover{
+    width:40%;
+}
+
+#read-more:hover h3{
+    color: orange;
+    transform: translate(50%,0%);
+}
+
 #social h2{
     color: white;
     font-weight: 700;

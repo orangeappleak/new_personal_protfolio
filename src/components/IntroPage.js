@@ -15,6 +15,9 @@ var IntroPage = () => (
                                 <div className="animate" id="intro-heading">
                                         <h1>Bringing Designs to Life</h1>
                                         <h2>My name is A Karthik and I love building beautiful and minimal designs that are both stunning as well as eye catching</h2>
+                                        <div class="animate" id="read-more">
+                                                <h3>Read More</h3>
+                                        </div>
                                         <div id="social">
                                                 <h2>Find me here:</h2>
                                                 <div id="social-icons">

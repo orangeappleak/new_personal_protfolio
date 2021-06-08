@@ -1,0 +1,95 @@
+#back-heading{
+    position: absolute;
+    font-size: 300px;
+    color: rgb(28, 27, 27);
+    font-family: 'Open Sans';
+}
+
+#back-svg{
+    top: 10%;
+    z-index: 1;
+}
+
+#back-svg svg{
+    fill:rgba(75, 75, 75, 0.229);
+}
+
+#project-section #projects-heading{
+    color: black;
+    font-size: 80px;
+    font-family: 'Open Sans';
+    height: 20vh;
+    background-color: white;
+    border-radius: 40px 0 0 40px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+
+}
+
+#project-list{
+    margin-top: 15em;
+}
+
+#project{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+    margin-top: 30em;
+}
+
+#project-img-wrapper{
+    flex: 1;
+    position: absolute !important;
+    top: 1;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 70% !important;
+    height: 70vh !important;
+}
+
+#project-img-wrapper img{
+    height: 100%;   
+    opacity: 1;
+}
+
+
+#project-heading-wrapper{
+    cursor: pointer;
+    position: relative !important;
+    height: auto !important;
+    width: 40% !important;
+    background-color: #21094e92;
+    backdrop-filter: blur(20px) contrast(2);
+    border-radius: 10px 0 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.5s ease-in-out,width 0.4s cubic-bezier(.75,0,.24,.99),border-radius 0.6s ease-in-out;
+}
+
+#project-heading-wrapper:hover{
+    background-color: #21094e;
+    width: 50% !important;
+    border-radius: 50px 0 50px 0;
+}
+
+#project-heading-wrapper:hover h1{
+    color: orange;
+    transform: scale(1.2);
+}
+
+#project-heading-wrapper h1{
+    color: transparent;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    padding: 0.6em 1em;
+    margin: 0.4em 0;
+    transition: color 0.2s ease-in-out,transform 0.4s ease-in-out;
+}
