@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {Parallax,ParallaxLayer} from '@react-spring/parallax';
+import {Parallax} from '@react-spring/parallax';
 import '../stylesheets/App.css';
 import '../stylesheets/mobile.css';
 

@@ -5,6 +5,7 @@ import joker from '../components/project images/TheJoker.png';
 import biker from '../components/project images/TheBikerGang.png';
 import speeve from '../components/project images/speever.png';
 import ems from '../components/project images/ems.png';
+import animehub from '../components/project images/AnimeHub.png';
 
 import '../stylesheets/Projects.css';
 
@@ -22,15 +23,14 @@ var Projects = () =>(
 )
 
 function ProjectList(){
-    var projectNames = {"The Joker": joker,"The Biker Gang": biker,"Speeve": speeve,"EMS": ems}
+    var projectNames = {"The Joker": joker,"The Biker Gang": biker,"Speeve": speeve,"EMS": ems,"Anime Hub": animehub}
 
     return(
         <div id="project-list">
             {Object.keys(projectNames).map((key,index) => (
-                console.log(projectNames[index]),
-                <div id="project">        
+                <div key={index} id="project">        
                     <ParallaxLayer offset={0.3} speed={0.3} style={{}} id="project-img-wrapper">
-                        <img src={projectNames[key]}/>
+                        <img alt="" src={projectNames[key]}/>
                     </ParallaxLayer>
                     <ParallaxLayer offset={0.2} speed={0.2} id="project-heading-wrapper">
                         <h1 id="project-title">{index + 1}. {key}</h1>
