@@ -5,6 +5,7 @@
     font-family: 'Open Sans';
 }
 
+
 #back-svg{
     top: 10%;
     z-index: 1;
@@ -28,7 +29,7 @@
 }
 
 #project-list{
-    margin-top: 15em;
+    margin-top: 5em;
 }
 
 #project{
@@ -37,22 +38,22 @@
     align-items: center;
     justify-content: center;
     padding: 5em;
-    margin-top: 30em;
 }
 
 #project-img-wrapper{
     flex: 1;
-    position: absolute !important;
-    top: 1;
+    position: relative !important;
     display: flex;
-    overflow: hidden;
     justify-content: center;
-    width: 70% !important;
-    height: 70vh !important;
+    align-items: center;
+    width: 100% !important;
+    height: 70vh!important;
 }
 
 #project-img-wrapper img{
+    position: absolute !important;
     height: 100%;   
+    left: 20%;
     opacity: 1;
 }
 

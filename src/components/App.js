@@ -7,13 +7,14 @@ import Navbar from '../components/Navbar.js';
 import IntroPage from '../components/IntroPage.js';
 import About from '../components/About';
 import Projects from '../components/Projects';
+import SeperateProjectSection from '../components/seperateProjectSection';
 
 function App() {
 
   useEffect(() => {
     load_end();
   }, []);
-
+  
   return (
     <div id="main-page">
       <div id="load">
@@ -21,6 +22,7 @@ function App() {
         <div id="seperation"></div>
         <h1 id="K">K</h1>
       </div>
+      < SeperateProjectSection />
       <Navbar />
       <Parallax style={{position: 'relative'}} id="parallax-pages" pages={4}>
         <IntroPage />

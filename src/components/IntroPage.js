@@ -3,7 +3,8 @@ import {ParallaxLayer} from '@react-spring/parallax';
 
 import '../stylesheets/IntroPage.css';
 
-var IntroPage = () => (
+var IntroPage = () => {
+        return(
         <div id="intro-page">
                 <ParallaxLayer style={{
                         position: 'relative',
@@ -36,6 +37,6 @@ var IntroPage = () => (
                         </div>
                 </ParallaxLayer>
         </div>
-)
+        )}
 
 export default IntroPage;

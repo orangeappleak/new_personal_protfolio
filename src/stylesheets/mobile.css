@@ -115,27 +115,30 @@
     }
 
     #project-section #project-list{
-        margin: 14em 0 0 0 !important;
+        margin: 10em 0 0 0 !important;
     }
 
     #project-section #project-list #project{
-        margin-bottom: 20em !important;
-        margin-top: 2em !important;
+        margin-bottom: 2em !important;
+        margin-top: 1em !important;
+        width: 100% !important;
         padding: 0;
     }
 
     #project-list #project #project-img-wrapper{
-        height: 50% !important;
-        overflow: hidden;
+        width: 100vw !important;
+        position: relative !important;
     }
 
-    #project-img-wrapper img{
-        height: 20%;
-
+    #project-list #project #project-img-wrapper img{
+        position: absolute !important;
+        height: 70%;
+        transform: translate(0%,0%);
     }
+
 
     #project-list #project #project-heading-wrapper{
-        width: 80% !important;
+        width: 90% !important;
     }
 
     #project #project-heading-wrapper h1{
