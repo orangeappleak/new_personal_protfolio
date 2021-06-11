@@ -1,5 +1,6 @@
 import React from 'react';
 import {ParallaxLayer} from '@react-spring/parallax';
+import ReactDOM from 'react-dom';
 
 import joker from '../components/project images/TheJoker.png';
 import biker from '../components/project images/TheBikerGang.png';
@@ -7,10 +8,14 @@ import speeve from '../components/project images/speever.png';
 import ems from '../components/project images/ems.png';
 import animehub from '../components/project images/AnimeHub.png';
 
-
-import SeperateProjectSection from '../components/seperateProjectSection';
-
 import '../stylesheets/Projects.css';
+
+
+import Joker from './project-windows/Joker';
+import BikerGang from './project-windows/BikerGang';
+import Speeve from './project-windows/Speeve';
+import EMS from './project-windows/EMS';
+import AnimeHub from './project-windows/AnimeHub';
 
 var Projects = () =>(
     <ParallaxLayer style={{position: 'relative',height: '100vh'}} offset={0} speed={1.2} id="project-section">
@@ -45,10 +50,21 @@ function ProjectList(){
 }
 
 function openProjectSection(ele){
+
+
+    var projects = {
+        1: < Joker />,
+        2: <BikerGang />,
+        3: <Speeve />,
+        4: <EMS />,
+        5: <AnimeHub />
+    }
+
     document.getElementById("seperate-project-section").classList.add("open");
     setTimeout(() => {
         document.getElementById("main-project-section").classList.add("open");
         document.getElementById("main-project-section").classList.add(ele.target.innerText.split(" ")[0].replace(".",""));
+        ReactDOM.render(projects[ele.target.innerText.split(" ")[0].replace(".","")],document.getElementById("project-data"));
     }, 350);
 }
 

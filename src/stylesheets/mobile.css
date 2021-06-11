@@ -99,9 +99,9 @@
     }
 
     #project-section #back-svg{
-        top: 27%;
+        top: 20% !important;
         width: 100% !important;
-        height: auto !important;
+        height: 10vh !important;
         display: flex;
         margin: 0;
         padding: 0;
@@ -133,7 +133,7 @@
     #project-list #project #project-img-wrapper img{
         position: absolute !important;
         height: 70%;
-        transform: translate(0%,0%);
+        transform: translate(-20%,0%);
     }
 
 
@@ -144,6 +144,60 @@
     #project #project-heading-wrapper h1{
         text-align: center;
         font-size: 28px;
+    }
+
+    #project-name-img-wrapper{
+        height: 60% !important;
+        width: auto !important;
+    }
+
+    #project-name-img-wrapper img{
+        width: 100% !important;
+    }
+
+    #project-description{
+        padding: 20px!important;
+        flex-direction: column;
+        transform: translate(0%,50%) !important;
+    }
+
+    #project-description p{
+        text-align: left !important;
+    }
+
+    #project-img2{
+        display: none !important;
+    }
+
+    #project-description #basic-desc h1{
+        font-size: 60px !important;
+    }
+
+    #basic-desc #tools-used{
+        justify-content: space-around;
+    }
+
+    #basic-desc #tools-used h1{
+        font-size: 28px !important;
+    }
+
+    #basic-desc #tools-used h2{
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    #tools-used-left{
+        flex: 1;
+    }
+
+    #tools-used-right{
+        text-align: right;
+        flex: 1;
+    }
+
+
+    #seperate-project-section #close-section{
+        width: 10%;
     }
 
     
