@@ -14,10 +14,10 @@ var Speeve = () => {
             </div>
             <div id="project-description">
                 <div id="basic-desc">
-                    <h1>The Biker Gang</h1>
+                    <h1>Speeve</h1>
                     <p>
                         A web-app as well as a mobile app designed and developed for a start-up company called Speeve.Made use of ReactJs and React-native
-                        to develop the web-app and mobile app respectively.The Web-App is a SPA(Single Page Application) that gives a brief info on what Speeve is and 
+                        to develop the web-app and mobile app respectively.The Web-App is a SPA(Single Page Application) that gives a brief info on what Speeve is and
                         what Speeve does.It also allows Users to create an account via the web app.
                     </p>
 

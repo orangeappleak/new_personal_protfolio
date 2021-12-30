@@ -13,8 +13,8 @@ var EMS = () => {
             </div>
             <div id="project-description">
                 <div  id="basic-desc">
-                    <h1>Employee Management Site</h1>
-                    <p>This Website was designed and developed as a part of a hackathon on HackerEarth.com, the challenge was to create a web app 
+                    <h1>Employee Management Sys</h1>
+                    <p>This Website was designed and developed as a part of a hackathon on HackerEarth.com, the challenge was to create a web app
                     that lets project managers and higher authorities manage their employees in a better way.It lets employees make requests for leaves and holidays and also lets
                     lets the manager know whether a certain employee has showed up for work or not.The web app also lets the project head to manage the project teams that he has.
                     </p>

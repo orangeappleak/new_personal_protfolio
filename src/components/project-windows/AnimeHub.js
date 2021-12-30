@@ -13,14 +13,13 @@ var AnimeHub = () => {
             </div>
             <div id="project-description">
                 <div id="basic-desc">
-                    <h1>The Joker</h1>
-                    <p>A Website that was first designed in figma and 
-                    then built using basic html css and some JS.
-                    It is a concept website for the movie Joker and hence has all related information about the movie 
-                    like the movie trailers and clips.
+                    <h1>Anime Hub</h1>
+                    <p>This web application helps users to get information about any anime they like. It makes use of a public API from which the anime
+                    information is extracted. The web app also makes it easier for people to find new anime shows to watch to according to their liking.
                     </p>
 
-                    <p>This was one of my first designs where I used figma first to design the page and then moved on to hard coding the actual site.
+                    <p>The web application features a top ten anime list which is based on the ratings of the anime shows, it also features a search bar that lets you
+                    search your favourite anime.
                     </p>
                     <div id="tools-used">
                         <div id="tools-used-left">
@@ -39,6 +38,8 @@ var AnimeHub = () => {
                             <div id="roles">
                                     <h2>UI/UX Designer</h2>
                                     <h2>Front-End Developer</h2>
+                                    <h2>Full-Stack Developer</h2>
+                                    <h2>React Developer</h2>
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,8 @@ var About = () => (
             <h1 style={{fontWeight: '700'}}>About Me</h1>
             <ParallaxLayer style={{
                 position: 'relative',
-                height: '50vh',
+                height: 'auto',
+                padding: '100px'
             }} speed={0.4} offset={0.2} id="skills">
                 <h1>Web Developer</h1>
                 <h1>UI/UX Designer</h1>

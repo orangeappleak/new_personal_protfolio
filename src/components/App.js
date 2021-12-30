@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     load_end();
   }, []);
-  
+
   return (
     <div id="main-page">
       <div id="load">
@@ -24,7 +24,7 @@ function App() {
       </div>
       < SeperateProjectSection />
       <Navbar />
-      <Parallax style={{position: 'relative'}} id="parallax-pages" pages={4}>
+      <Parallax style={{position: 'relative'}} id="parallax-pages" pages={3.99}>
         <IntroPage />
         <About />
         <Projects />
@@ -44,7 +44,7 @@ function load_end(){
       ele.classList.add("now");
     });
     }, 1000);
-    
+
     setTimeout(() => {
       document.querySelector("#main-page").removeChild(document.querySelector("#load"));
     }, 3000);
